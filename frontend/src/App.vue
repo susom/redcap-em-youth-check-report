@@ -3,7 +3,7 @@
     <div class="row hidden-print">
       <HeaderSection/>
       <SearchSection/>
-      <SummarySection/>
+      <MainSection/>
     </div>
 
   </div>
@@ -12,12 +12,12 @@
 <script>
 import HeaderSection from "./components/HeaderSection.vue";
 import SearchSection from "./components/SearchSection.vue";
-import SummarySection from "./components/SummarySection.vue";
+import MainSection from "./components/MainSection.vue";
 
 export default {
   name: 'App',
   components: {
-    SummarySection,
+    MainSection,
     SearchSection,
     HeaderSection
   }

@@ -332,7 +332,7 @@ class YouthCheckReport extends \ExternalModules\AbstractExternalModule
         $impair_list = $this->listFurtherEvaluation($data);
         $result['further_eval']['impair_list'] = $impair_list;
         $result['further_eval']['open_ended_response'] = $data['q119'];
-        $result['further_eval']['recommend_clinical_interview'] = 'TODO';//TODO
+        $result['further_eval']['recommend_clinical_interview'] = '';
         return $result;
     }
 

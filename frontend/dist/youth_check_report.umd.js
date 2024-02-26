@@ -2938,7 +2938,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/App.vue?vue&type=template&id=a4338b9e
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/App.vue?vue&type=template&id=60fca19b
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -2949,7 +2949,7 @@ var render = function render() {
     }
   }, [_c('div', {
     staticClass: "row hidden-print"
-  }, [_c('HeaderSection'), _c('SearchSection'), _c('SummarySection')], 1)]);
+  }, [_c('HeaderSection'), _c('SearchSection'), _c('MainSection')], 1)]);
 };
 var staticRenderFns = [];
 
@@ -3199,8 +3199,8 @@ var SearchSection_component = normalizeComponent(
 )
 
 /* harmony default export */ var SearchSection = (SearchSection_component.exports);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/SummarySection.vue?vue&type=template&id=729a88ac&scoped=true
-var SummarySectionvue_type_template_id_729a88ac_scoped_true_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/MainSection.vue?vue&type=template&id=f8cf20b8&scoped=true
+var MainSectionvue_type_template_id_f8cf20b8_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', [_c('div', {
@@ -3212,13 +3212,52 @@ var SummarySectionvue_type_template_id_729a88ac_scoped_true_render = function re
     class: _vm.alertVariant
   }, [_vm._v(_vm._s(_vm.alertMessage))])]) : _vm._e()]), _vm.showLoader === true ? _c('div', {
     staticClass: "row"
-  }, [_vm._m(0)]) : this.record_id != null ? _c('div', [_c('div', {
+  }, [_vm._m(0)]) : this.record_id != null ? _c('div', [_c('SummarySection', {
+    attrs: {
+      "record": this.record
+    }
+  }), _c('hr'), _c('ClinicalSignificantSection', {
+    attrs: {
+      "record": this.record
+    }
+  }), _c('hr'), _c('ScalesSection', {
+    attrs: {
+      "record": this.record
+    }
+  }), _c('hr'), _c('DPSSymptomScaleSection', {
+    attrs: {
+      "record": this.record
+    }
+  })], 1) : _c('div', [_c('p', [_vm._v("No record is selected.")])])]);
+};
+var MainSectionvue_type_template_id_f8cf20b8_scoped_true_staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('div', {
+    staticClass: "col-12"
+  }, [_c('div', {
+    staticClass: "d-flex justify-content-center"
+  }, [_c('div', {
+    staticClass: "spinner-border",
+    attrs: {
+      "role": "status"
+    }
+  })])]);
+}];
+
+;// CONCATENATED MODULE: ./src/components/MainSection.vue?vue&type=template&id=f8cf20b8&scoped=true
+
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/SummarySection.vue?vue&type=template&id=3c98d082&scoped=true
+var SummarySectionvue_type_template_id_3c98d082_scoped_true_render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('div', [_c('div', {
     staticClass: "row m-t-3 print-expand"
   }, [_c('div', {
     staticClass: "print-expand col-sm-4"
   }, [_c('h2', [_vm._v("Report for " + _vm._s(this.record.summary.test_id))]), _c('br'), _c('table', {
     staticClass: "table table-striped"
-  }, [_c('tbody', [_c('tr', [_vm._m(1), _c('td', [_vm._v(_vm._s(this.record.summary.score_total_dps))])]), _c('tr', [_vm._m(2), _c('td', [_vm._v(_vm._s(this.record.summary.score_impairment))])]), _c('tr', [_vm._m(3), _c('td', [_vm._v(_vm._s(this.record.summary.interview_date))])])])])]), _c('div', {
+  }, [_c('tbody', [_c('tr', [_vm._m(0), _c('td', [_vm._v(_vm._s(this.record.summary.score_total_dps))])]), _c('tr', [_vm._m(1), _c('td', [_vm._v(_vm._s(this.record.summary.score_impairment))])]), _c('tr', [_vm._m(2), _c('td', [_vm._v(_vm._s(this.record.summary.interview_date))])])])])]), _c('div', {
     staticClass: "print-expand col-sm-8"
   }, [this.record.further_eval.impair_list == null ? _c('h2', [_vm._v("Further Evaluation Not Recommended")]) : _c('h2', [_vm._v("Further Evaluation Recommended")]), _vm._l(this.record.further_eval.impair_list, function (item) {
     return _c('ul', {
@@ -3228,9 +3267,70 @@ var SummarySectionvue_type_template_id_729a88ac_scoped_true_render = function re
         "innerHTML": _vm._s(item)
       }
     })]);
-  }), _vm._m(4), _c('ul', [_c('li', [_vm._v("Open-ended response: " + _vm._s(this.record.further_eval.open_ended_response))]), _c('li', [_vm._v("Did youth or program staff recommend clinical interview? " + _vm._s(this.record.further_eval.recommend_clinical_interview) + " ")])])], 2)]), _c('hr'), this.record.clinical_significant.length !== 0 ? _c('div', {
+  }), _vm._m(3), _c('ul', [_c('li', [_vm._v("Open-ended response: " + _vm._s(this.record.further_eval.open_ended_response))]), _c('li', [_vm._v("Did youth or program staff recommend clinical interview? " + _vm._s(this.record.further_eval.recommend_clinical_interview) + " ")])])], 2)])]);
+};
+var SummarySectionvue_type_template_id_3c98d082_scoped_true_staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('td', [_c('strong', {
+    staticClass: "text-capitalize"
+  }, [_vm._v("Total Symptom Score")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('td', [_c('strong', {
+    staticClass: "text-capitalize"
+  }, [_vm._v("Total Impairment Score")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('td', [_c('strong', {
+    staticClass: "text-capitalize"
+  }, [_vm._v("Interview Date")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('strong', [_c('em', [_vm._v("Additional reasons for evaluation:")])]);
+}];
+
+;// CONCATENATED MODULE: ./src/components/SummarySection.vue?vue&type=template&id=3c98d082&scoped=true
+
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/SummarySection.vue?vue&type=script&lang=js
+/* harmony default export */ var SummarySectionvue_type_script_lang_js = ({
+  name: "NewSection",
+  props: {
+    record: Object
+  }
+});
+;// CONCATENATED MODULE: ./src/components/SummarySection.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_SummarySectionvue_type_script_lang_js = (SummarySectionvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./src/components/SummarySection.vue
+
+
+
+
+
+/* normalize component */
+;
+var SummarySection_component = normalizeComponent(
+  components_SummarySectionvue_type_script_lang_js,
+  SummarySectionvue_type_template_id_3c98d082_scoped_true_render,
+  SummarySectionvue_type_template_id_3c98d082_scoped_true_staticRenderFns,
+  false,
+  null,
+  "3c98d082",
+  null
+  
+)
+
+/* harmony default export */ var SummarySection = (SummarySection_component.exports);
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/ClinicalSignificantSection.vue?vue&type=template&id=6e62eb0c&scoped=true
+var ClinicalSignificantSectionvue_type_template_id_6e62eb0c_scoped_true_render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('div', [this.record.clinical_significant.length !== 0 ? _c('div', {
     staticClass: "row mt-5"
-  }, [_vm._m(5), _c('div', {
+  }, [_vm._m(0), _c('div', {
     staticClass: "col-sm-4"
   }, [_c('table', {
     staticClass: "table table-striped table-condensed",
@@ -3278,7 +3378,115 @@ var SummarySectionvue_type_template_id_729a88ac_scoped_true_render = function re
         }
       });
     }), 0)]);
-  }), 0)])])]) : _vm._e(), _c('div', {
+  }), 0)])])]) : _vm._e()]);
+};
+var ClinicalSignificantSectionvue_type_template_id_6e62eb0c_scoped_true_staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('div', {
+    staticClass: "row col-xs-10"
+  }, [_c('h2', [_vm._v("Clinically Significant Information")])]);
+}];
+
+;// CONCATENATED MODULE: ./src/components/ClinicalSignificantSection.vue?vue&type=template&id=6e62eb0c&scoped=true
+
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/ClinicalSignificantSection.vue?vue&type=script&lang=js
+/* harmony default export */ var ClinicalSignificantSectionvue_type_script_lang_js = ({
+  name: "ClinicalSignificantSection",
+  props: {
+    record: Object
+  }
+});
+;// CONCATENATED MODULE: ./src/components/ClinicalSignificantSection.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_ClinicalSignificantSectionvue_type_script_lang_js = (ClinicalSignificantSectionvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./src/components/ClinicalSignificantSection.vue
+
+
+
+
+
+/* normalize component */
+;
+var ClinicalSignificantSection_component = normalizeComponent(
+  components_ClinicalSignificantSectionvue_type_script_lang_js,
+  ClinicalSignificantSectionvue_type_template_id_6e62eb0c_scoped_true_render,
+  ClinicalSignificantSectionvue_type_template_id_6e62eb0c_scoped_true_staticRenderFns,
+  false,
+  null,
+  "6e62eb0c",
+  null
+  
+)
+
+/* harmony default export */ var ClinicalSignificantSection = (ClinicalSignificantSection_component.exports);
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/DPSSymptomScaleSection.vue?vue&type=template&id=25964b11&scoped=true
+var DPSSymptomScaleSectionvue_type_template_id_25964b11_scoped_true_render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('div', [_c('div', {
+    staticClass: "col-xs-12"
+  }, [_c('h1', [_vm._v("DPS Symptom Scale Reconstruction")]), _vm._l(this.record.symptom_scale_reconstruction, function (item, index) {
+    return _c('div', {
+      key: index
+    }, [_c('h2', [_vm._v(_vm._s(index))]), _c('table', {
+      staticClass: "table table-striped table-condensed",
+      attrs: {
+        "id": "{{index}}"
+      }
+    }, [item.header !== undefined ? _c('thead', [_c('tr', _vm._l(item.header, function (item) {
+      return _c('th', {
+        key: item
+      }, [_vm._v(_vm._s(item))]);
+    }), 0)]) : _vm._e(), _c('tbody', _vm._l(item.rows, function (row) {
+      return _c('tr', {
+        key: row
+      }, _vm._l(row, function (col) {
+        return _c('td', {
+          key: col,
+          domProps: {
+            "innerHTML": _vm._s(col)
+          }
+        });
+      }), 0);
+    }), 0)]), _c('br')]);
+  })], 2)]);
+};
+var DPSSymptomScaleSectionvue_type_template_id_25964b11_scoped_true_staticRenderFns = [];
+
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/DPSSymptomScaleSection.vue?vue&type=script&lang=js
+/* harmony default export */ var DPSSymptomScaleSectionvue_type_script_lang_js = ({
+  name: "DPSSymptomScaleSection",
+  props: {
+    record: Object
+  }
+});
+;// CONCATENATED MODULE: ./src/components/DPSSymptomScaleSection.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_DPSSymptomScaleSectionvue_type_script_lang_js = (DPSSymptomScaleSectionvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./src/components/DPSSymptomScaleSection.vue
+
+
+
+
+
+/* normalize component */
+;
+var DPSSymptomScaleSection_component = normalizeComponent(
+  components_DPSSymptomScaleSectionvue_type_script_lang_js,
+  DPSSymptomScaleSectionvue_type_template_id_25964b11_scoped_true_render,
+  DPSSymptomScaleSectionvue_type_template_id_25964b11_scoped_true_staticRenderFns,
+  false,
+  null,
+  "25964b11",
+  null
+  
+)
+
+/* harmony default export */ var DPSSymptomScaleSection = (DPSSymptomScaleSection_component.exports);
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/ScalesSection.vue?vue&type=template&id=0b6e30ce&scoped=true
+var ScalesSectionvue_type_template_id_0b6e30ce_scoped_true_render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('div', [_c('div', {
     staticClass: "row m-t-3"
   }, [_c('div', {
     staticClass: "print-expand col-sm-6"
@@ -3352,85 +3560,55 @@ var SummarySectionvue_type_template_id_729a88ac_scoped_true_render = function re
         key: col
       }, [_vm._v(_vm._s(col))]);
     }), 0)]);
-  }), 0)])])]), _c('div', {
-    staticClass: "col-xs-12"
-  }, [_c('h1', [_vm._v("DPS Symptom Scale Reconstruction")]), _vm._l(this.record.symptom_scale_reconstruction, function (item, index) {
-    return _c('div', {
-      key: index
-    }, [_c('h2', [_vm._v(_vm._s(index))]), _c('table', {
-      staticClass: "table table-striped table-condensed",
-      attrs: {
-        "id": "{{index}}"
-      }
-    }, [item.header !== undefined ? _c('thead', [_c('tr', _vm._l(item.header, function (item) {
-      return _c('th', {
-        key: item
-      }, [_vm._v(_vm._s(item))]);
-    }), 0)]) : _vm._e(), _c('tbody', _vm._l(item.rows, function (row) {
-      return _c('tr', {
-        key: row
-      }, _vm._l(row, function (col) {
-        return _c('td', {
-          key: col,
-          domProps: {
-            "innerHTML": _vm._s(col)
-          }
-        });
-      }), 0);
-    }), 0)]), _c('br')]);
-  })], 2)]) : _c('div', [_c('p', [_vm._v("No record is selected.")])])]);
+  }), 0)])])])]);
 };
-var SummarySectionvue_type_template_id_729a88ac_scoped_true_staticRenderFns = [function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c('div', {
-    staticClass: "col-12"
-  }, [_c('div', {
-    staticClass: "d-flex justify-content-center"
-  }, [_c('div', {
-    staticClass: "spinner-border",
-    attrs: {
-      "role": "status"
-    }
-  })])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c('td', [_c('strong', {
-    staticClass: "text-capitalize"
-  }, [_vm._v("Total Symptom Score")])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c('td', [_c('strong', {
-    staticClass: "text-capitalize"
-  }, [_vm._v("Total Impairment Score")])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c('td', [_c('strong', {
-    staticClass: "text-capitalize"
-  }, [_vm._v("Interview Date")])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c('strong', [_c('em', [_vm._v("Additional reasons for evaluation:")])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c('div', {
-    staticClass: "row col-xs-10"
-  }, [_c('h2', [_vm._v("Clinically Significant Information")])]);
-}];
+var ScalesSectionvue_type_template_id_0b6e30ce_scoped_true_staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./src/components/SummarySection.vue?vue&type=template&id=729a88ac&scoped=true
-
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/SummarySection.vue?vue&type=script&lang=js
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/ScalesSection.vue?vue&type=script&lang=js
+/* harmony default export */ var ScalesSectionvue_type_script_lang_js = ({
+  name: "ScalesSection",
+  props: {
+    record: Object
+  }
+});
+;// CONCATENATED MODULE: ./src/components/ScalesSection.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_ScalesSectionvue_type_script_lang_js = (ScalesSectionvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./src/components/ScalesSection.vue
 
 
 
-/* harmony default export */ var SummarySectionvue_type_script_lang_js = ({
-  name: "SummarySection",
+
+
+/* normalize component */
+;
+var ScalesSection_component = normalizeComponent(
+  components_ScalesSectionvue_type_script_lang_js,
+  ScalesSectionvue_type_template_id_0b6e30ce_scoped_true_render,
+  ScalesSectionvue_type_template_id_0b6e30ce_scoped_true_staticRenderFns,
+  false,
+  null,
+  "0b6e30ce",
+  null
+  
+)
+
+/* harmony default export */ var ScalesSection = (ScalesSection_component.exports);
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/MainSection.vue?vue&type=script&lang=js
+
+
+
+
+
+
+
+/* harmony default export */ var MainSectionvue_type_script_lang_js = ({
+  name: "MainSection",
+  components: {
+    ScalesSection: ScalesSection,
+    DPSSymptomScaleSection: DPSSymptomScaleSection,
+    ClinicalSignificantSection: ClinicalSignificantSection,
+    SummarySection: SummarySection
+  },
   methods: {
     getRecord: function () {
       this.showLoader = true;
@@ -3470,9 +3648,9 @@ var SummarySectionvue_type_template_id_729a88ac_scoped_true_staticRenderFns = [f
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/SummarySection.vue?vue&type=script&lang=js
- /* harmony default export */ var components_SummarySectionvue_type_script_lang_js = (SummarySectionvue_type_script_lang_js); 
-;// CONCATENATED MODULE: ./src/components/SummarySection.vue
+;// CONCATENATED MODULE: ./src/components/MainSection.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_MainSectionvue_type_script_lang_js = (MainSectionvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./src/components/MainSection.vue
 
 
 
@@ -3480,18 +3658,18 @@ var SummarySectionvue_type_template_id_729a88ac_scoped_true_staticRenderFns = [f
 
 /* normalize component */
 ;
-var SummarySection_component = normalizeComponent(
-  components_SummarySectionvue_type_script_lang_js,
-  SummarySectionvue_type_template_id_729a88ac_scoped_true_render,
-  SummarySectionvue_type_template_id_729a88ac_scoped_true_staticRenderFns,
+var MainSection_component = normalizeComponent(
+  components_MainSectionvue_type_script_lang_js,
+  MainSectionvue_type_template_id_f8cf20b8_scoped_true_render,
+  MainSectionvue_type_template_id_f8cf20b8_scoped_true_staticRenderFns,
   false,
   null,
-  "729a88ac",
+  "f8cf20b8",
   null
   
 )
 
-/* harmony default export */ var SummarySection = (SummarySection_component.exports);
+/* harmony default export */ var MainSection = (MainSection_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/App.vue?vue&type=script&lang=js
 
 
@@ -3499,7 +3677,7 @@ var SummarySection_component = normalizeComponent(
 /* harmony default export */ var Appvue_type_script_lang_js = ({
   name: 'App',
   components: {
-    SummarySection: SummarySection,
+    MainSection: MainSection,
     SearchSection: SearchSection,
     HeaderSection: HeaderSection
   }
