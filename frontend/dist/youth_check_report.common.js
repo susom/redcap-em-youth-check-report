@@ -2031,7 +2031,7 @@ module.exports = Math.trunc || function trunc(x) {
 
 var DESCRIPTORS = __webpack_require__(3724);
 var IE8_DOM_DEFINE = __webpack_require__(5917);
-var V8_PROTOTYPE_DEFINE_BUG = __webpack_require__(8686);
+var V8_PROTOTYPE_DEFINE_BUG = __webpack_require__(6305);
 var anObject = __webpack_require__(8551);
 var toPropertyKey = __webpack_require__(6969);
 
@@ -2577,7 +2577,7 @@ module.exports = NATIVE_SYMBOL
 
 /***/ }),
 
-/***/ 8686:
+/***/ 6305:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
@@ -3189,8 +3189,8 @@ var SearchSection_component = normalizeComponent(
 )
 
 /* harmony default export */ var SearchSection = (SearchSection_component.exports);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/SummarySection.vue?vue&type=template&id=b2a27b36&scoped=true
-var SummarySectionvue_type_template_id_b2a27b36_scoped_true_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/SummarySection.vue?vue&type=template&id=729a88ac&scoped=true
+var SummarySectionvue_type_template_id_729a88ac_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', [_c('div', {
@@ -3210,14 +3210,18 @@ var SummarySectionvue_type_template_id_b2a27b36_scoped_true_render = function re
     staticClass: "table table-striped"
   }, [_c('tbody', [_c('tr', [_vm._m(1), _c('td', [_vm._v(_vm._s(this.record.summary.score_total_dps))])]), _c('tr', [_vm._m(2), _c('td', [_vm._v(_vm._s(this.record.summary.score_impairment))])]), _c('tr', [_vm._m(3), _c('td', [_vm._v(_vm._s(this.record.summary.interview_date))])])])])]), _c('div', {
     staticClass: "print-expand col-sm-8"
-  }, [this.record.further_eval.impair_list == null ? _c('h2', [_vm._v("Further Evaluation Not Recommended")]) : _c('h2', [_vm._v("Further Evaluation Recommended")]), _vm._l(this.record.further_eval.impair_list, function (index, item) {
+  }, [this.record.further_eval.impair_list == null ? _c('h2', [_vm._v("Further Evaluation Not Recommended")]) : _c('h2', [_vm._v("Further Evaluation Recommended")]), _vm._l(this.record.further_eval.impair_list, function (item) {
     return _c('ul', {
       key: item.record_id
-    }, [_c('li', [_vm._v(_vm._s(item))])]);
-  }), _c('ul', [_c('li', [_vm._v("Open-ended response: " + _vm._s(this.record.further_eval.open_ended_response))]), _c('li', [_vm._v("Did youth or program staff recommend clinical interview? " + _vm._s(this.record.further_eval.recommend_clinical_interview) + " ")])])], 2)]), _c('hr'), _c('div', {
-    staticClass: "row m-t-3"
-  }, [this.record.clinical_significant.length !== 0 ? _c('div', [_vm._m(4), _c('div', {
-    staticClass: "print-expand col-xs-4"
+    }, [_c('li', {
+      domProps: {
+        "innerHTML": _vm._s(item)
+      }
+    })]);
+  }), _vm._m(4), _c('ul', [_c('li', [_vm._v("Open-ended response: " + _vm._s(this.record.further_eval.open_ended_response))]), _c('li', [_vm._v("Did youth or program staff recommend clinical interview? " + _vm._s(this.record.further_eval.recommend_clinical_interview) + " ")])])], 2)]), _c('hr'), this.record.clinical_significant.length !== 0 ? _c('div', {
+    staticClass: "row mt-5"
+  }, [_vm._m(5), _c('div', {
+    staticClass: "col-sm-4"
   }, [_c('table', {
     staticClass: "table table-striped table-condensed",
     attrs: {
@@ -3229,12 +3233,19 @@ var SummarySectionvue_type_template_id_b2a27b36_scoped_true_render = function re
     return _c('tr', {
       key: item.record_id
     }, [_c('th', [_vm._v(_vm._s(item))])]);
-  }), 0) : _vm._e(), _c('tbody', _vm._l(this.record.clinical_significant.rows, function (index, item) {
+  }), 0) : _vm._e(), _c('tbody', _vm._l(this.record.clinical_significant.rows, function (row) {
     return _c('tr', {
-      key: item.record_id
-    }, [_c('th', [_vm._v(_vm._s(item))])]);
+      key: row.record_id
+    }, _vm._l(row, function (col) {
+      return _c('td', {
+        key: col,
+        domProps: {
+          "innerHTML": _vm._s(col)
+        }
+      });
+    }), 0);
   }), 0)])]), _c('div', {
-    staticClass: "print-expand col-xs-8"
+    staticClass: "col-sm-8"
   }, [_c('table', {
     staticClass: "table table-striped table-condensed",
     attrs: {
@@ -3251,10 +3262,15 @@ var SummarySectionvue_type_template_id_b2a27b36_scoped_true_render = function re
       key: row
     }, [typeof row === 'string' ? _c('td', [_vm._v(_vm._s(row))]) : _c('div', _vm._l(row, function (col) {
       return _c('td', {
-        key: col
-      }, [_vm._v(_vm._s(col))]);
+        key: col,
+        domProps: {
+          "innerHTML": _vm._s(col)
+        }
+      });
     }), 0)]);
   }), 0)])])]) : _vm._e(), _c('div', {
+    staticClass: "row m-t-3"
+  }, [_c('div', {
     staticClass: "print-expand col-sm-6"
   }, [_c('h3', {
     attrs: {
@@ -3276,8 +3292,11 @@ var SummarySectionvue_type_template_id_b2a27b36_scoped_true_render = function re
       key: row
     }, _vm._l(row, function (col) {
       return _c('td', {
-        key: col
-      }, [_vm._v(_vm._s(col))]);
+        key: col,
+        domProps: {
+          "innerHTML": _vm._s(col)
+        }
+      });
     }), 0);
   }), 0)])]), _c('div', {
     staticClass: "print-expand col-sm-6"
@@ -3351,7 +3370,7 @@ var SummarySectionvue_type_template_id_b2a27b36_scoped_true_render = function re
     }), 0)]), _c('br')]);
   })], 2)]) : _c('div', [_c('p', [_vm._v("No record is selected.")])])]);
 };
-var SummarySectionvue_type_template_id_b2a27b36_scoped_true_staticRenderFns = [function () {
+var SummarySectionvue_type_template_id_729a88ac_scoped_true_staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -3385,12 +3404,16 @@ var SummarySectionvue_type_template_id_b2a27b36_scoped_true_staticRenderFns = [f
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
+  return _c('strong', [_c('em', [_vm._v("Additional reasons for evaluation:")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
   return _c('div', {
-    staticClass: "col-xs-10"
+    staticClass: "row col-xs-10"
   }, [_c('h2', [_vm._v("Clinically Significant Information")])]);
 }];
 
-;// CONCATENATED MODULE: ./src/components/SummarySection.vue?vue&type=template&id=b2a27b36&scoped=true
+;// CONCATENATED MODULE: ./src/components/SummarySection.vue?vue&type=template&id=729a88ac&scoped=true
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/SummarySection.vue?vue&type=script&lang=js
 
@@ -3449,11 +3472,11 @@ var SummarySectionvue_type_template_id_b2a27b36_scoped_true_staticRenderFns = [f
 ;
 var SummarySection_component = normalizeComponent(
   components_SummarySectionvue_type_script_lang_js,
-  SummarySectionvue_type_template_id_b2a27b36_scoped_true_render,
-  SummarySectionvue_type_template_id_b2a27b36_scoped_true_staticRenderFns,
+  SummarySectionvue_type_template_id_729a88ac_scoped_true_render,
+  SummarySectionvue_type_template_id_729a88ac_scoped_true_staticRenderFns,
   false,
   null,
-  "b2a27b36",
+  "729a88ac",
   null
   
 )

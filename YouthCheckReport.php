@@ -309,7 +309,7 @@ class YouthCheckReport extends \ExternalModules\AbstractExternalModule
     public function isFormEnabled($project, $formName, $data, $forms)
     {
         foreach ($forms as $key => $item) {
-            if ($formName == strip_tags($item)) {
+            if (strtolower($formName) === strtolower(strip_tags($item))) {
                 return $data['sections'][$key];
             }
         }
@@ -318,9 +318,11 @@ class YouthCheckReport extends \ExternalModules\AbstractExternalModule
 
     private function processSummaryData($data, $result)
     {
+        $aa = $data['sc_total_dps'];
+        $aa2 = $data['sc_impairment'];
         $result['summary']['test_id'] = $data['test_id'];
-        $result['summary']['score_total_dps'] = $data['score_total_dps'] ?: 0;
-        $result['summary']['score_impairment'] = $data['score_impairment'] ?: 0;
+        $result['summary']['score_total_dps'] = $data['sc_total_dps'] ?: 0;
+        $result['summary']['score_impairment'] = $data['sc_impairment'] ?: 0;
         $result['summary']['interview_date'] = $data['interview_date'];
         return $result;
     }
