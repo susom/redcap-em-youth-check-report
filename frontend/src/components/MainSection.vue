@@ -48,7 +48,10 @@ export default {
         obj.showLoader = false;
       }).catch(function (err) {
         obj.showAlert = true
+        obj.showLoader = false
+        obj.record_id = null
         obj.alertMessage = err
+        obj.alertVariant = 'alert-danger'
         console.log(err)
       });
     }

@@ -1,6 +1,6 @@
 <template>
     <div>
-      <div class="col-xs-12">
+      <div v-if="this.record.symptom_scale_reconstruction.length !== 0" class="col-xs-12">
         <h1>DPS Symptom Scale Reconstruction</h1>
 
         <div v-for="(item, index) in this.record.symptom_scale_reconstruction" :key="index">
