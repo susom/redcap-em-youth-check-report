@@ -1,64 +1,98 @@
 {
-	"name": "ClassNameHere",
-
-	"namespace": "Stanford\\ClassNameHere",
-
-	"description": "A template for a REDCap External Module",
-
-	"documentation": "README.md",
-
-	"authors": [
-		{
-			"name": "Andrew Martin",
-			"email": "andy123@stanford.edu",
-			"institution": "Stanford University"
-		}
-	],
-
-	"permissions": [
-		"redcap_module_system_enable",
-		"redcap_module_project_enable",
-		"redcap_module_save_configuration"
-	],
-	
-	"enable-every-page-hooks-on-system-pages": false,	
-
-	"links": {
-		"project": [
-
-		],
-		"control-center": [
-
-		]
-	},
-
-	"no-auth-pages": [
-
-	],
-
-	"project-settings": [
-		{
-			"key": "enable-project-debug-logging",
-			"name": "<b>Enable Debug Logging</b><br><i>(optional)</i> Requires installation and configuration of emLogger",
-			"required": false,
-			"type": "checkbox"
-		}
-	],
-
-
-	"system-settings": [
-		{
-			"key": "enable-system-debug-logging",
-			"name": "<b>Enable Debug Logging (system-wide)</b><i>(optional)</i> Requires installation and configuration of emLogger",
-			"required": false,
-			"type": "checkbox"
-		}
-	],
-
-	"compatibility": {
-		"php-version-min": "",
-		"php-version-max": "",
-		"redcap-version-min": "",
-		"redcap-version-max": ""
-	}
+  "name": "YouthCheckReport",
+  "namespace": "Stanford\\YouthCheckReport",
+  "description": "A template for a REDCap External Module",
+  "documentation": "README.md",
+  "authors": [
+    {
+      "name": "Ihab Zeedia",
+      "email": "ihabz@stanford.edu",
+      "institution": "Stanford University"
+    }
+  ],
+  "framework-version": 11,
+  "enable-every-page-hooks-on-system-pages": false,
+  "links": {
+    "project": [
+      {
+        "name": "Youth Check Report",
+        "key": "youthCheck",
+        "icon": "redcap-logo-letter",
+        "url": "pages/report.php",
+        "show-header-and-footer": true
+      }
+    ],
+    "control-center": [
+    ]
+  },
+  "auth-ajax-actions": [
+    "get_record"
+  ],
+  "enable-ajax-logging": true,
+  "no-auth-pages": [
+  ],
+  "project-settings": [
+    {
+      "key": "forms",
+      "name": "<b>Form to be displayed on Report</b>",
+      "required": true,
+      "type": "sub_settings",
+      "repeatable": true,
+      "sub_settings": [
+        {
+          "key": "form",
+          "name": "<b>Select From</b><br/>",
+          "required": true,
+          "type": "form-list"
+        },
+        {
+          "key": "has-score",
+          "name": "Form has Score?",
+          "type": "dropdown",
+          "choices": [
+            {
+              "name": "No",
+              "value": "0"
+            },
+            {
+              "name": "Yes",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "score-field",
+          "name": "<b>Select Form Score Field</b><br/>",
+          "required": false,
+          "type": "field-list"
+        },
+        {
+          "key": "score-value",
+          "name": "<b>Default Score Field Value</b><br/>",
+          "required": false,
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "key": "enable-project-debug-logging",
+      "name": "<b>Enable Debug Logging</b><br><i>(optional)</i> Requires installation and configuration of emLogger",
+      "required": false,
+      "type": "checkbox"
+    }
+  ],
+  "system-settings": [
+    {
+      "key": "enable-system-debug-logging",
+      "name": "<b>Enable Debug Logging (system-wide)</b><i>(optional)</i> Requires installation and configuration of emLogger",
+      "required": false,
+      "type": "checkbox"
+    }
+  ],
+  "compatibility": {
+    "php-version-min": "",
+    "php-version-max": "",
+    "redcap-version-min": "",
+    "redcap-version-max": ""
+  }
 }
