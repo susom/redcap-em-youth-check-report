@@ -3199,8 +3199,8 @@ var SearchSection_component = normalizeComponent(
 )
 
 /* harmony default export */ var SearchSection = (SearchSection_component.exports);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/SummarySection.vue?vue&type=template&id=2c0c2b8c&scoped=true
-var SummarySectionvue_type_template_id_2c0c2b8c_scoped_true_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/SummarySection.vue?vue&type=template&id=b2a27b36&scoped=true
+var SummarySectionvue_type_template_id_b2a27b36_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', [_c('div', {
@@ -3361,7 +3361,7 @@ var SummarySectionvue_type_template_id_2c0c2b8c_scoped_true_render = function re
     }), 0)]), _c('br')]);
   })], 2)]) : _c('div', [_c('p', [_vm._v("No record is selected.")])])]);
 };
-var SummarySectionvue_type_template_id_2c0c2b8c_scoped_true_staticRenderFns = [function () {
+var SummarySectionvue_type_template_id_b2a27b36_scoped_true_staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -3400,7 +3400,7 @@ var SummarySectionvue_type_template_id_2c0c2b8c_scoped_true_staticRenderFns = [f
   }, [_c('h2', [_vm._v("Clinically Significant Information")])]);
 }];
 
-;// CONCATENATED MODULE: ./src/components/SummarySection.vue?vue&type=template&id=2c0c2b8c&scoped=true
+;// CONCATENATED MODULE: ./src/components/SummarySection.vue?vue&type=template&id=b2a27b36&scoped=true
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/SummarySection.vue?vue&type=script&lang=js
 
@@ -3428,7 +3428,7 @@ var SummarySectionvue_type_template_id_2c0c2b8c_scoped_true_staticRenderFns = [f
   data() {
     return {
       record: {},
-      showLoader: true,
+      showLoader: false,
       record_id: null,
       showAlert: '',
       alertMessage: '',
@@ -3459,11 +3459,11 @@ var SummarySectionvue_type_template_id_2c0c2b8c_scoped_true_staticRenderFns = [f
 ;
 var SummarySection_component = normalizeComponent(
   components_SummarySectionvue_type_script_lang_js,
-  SummarySectionvue_type_template_id_2c0c2b8c_scoped_true_render,
-  SummarySectionvue_type_template_id_2c0c2b8c_scoped_true_staticRenderFns,
+  SummarySectionvue_type_template_id_b2a27b36_scoped_true_render,
+  SummarySectionvue_type_template_id_b2a27b36_scoped_true_staticRenderFns,
   false,
   null,
-  "2c0c2b8c",
+  "b2a27b36",
   null
   
 )

@@ -110,7 +110,12 @@ class YouthCheckReport extends \ExternalModules\AbstractExternalModule
 
                     } else {
                         $array['label'] = $Proj->metadata[$fieldname]['element_label'];
-                        $array['decode'] = $this->getEnumLabel($fieldname, $value);
+                        if($Proj->metadata[$fieldname]['element_type'] == 'text'){
+                            $array['decode'] = $value;
+                        }
+                        else{
+                            $array['decode'] = $this->getEnumLabel($fieldname, $value);
+                        }
 
                     }
 

@@ -189,7 +189,7 @@ export default {
   data() {
     return {
       record: {},
-      showLoader: true,
+      showLoader: false,
       record_id: null,
       showAlert: '',
       alertMessage: '',
