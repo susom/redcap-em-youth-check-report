@@ -2,8 +2,6 @@
 
 namespace Stanford\YouthCheckReport;
 
-use ExternalModules\Records;
-
 require_once "emLoggerTrait.php";
 
 class YouthCheckReport extends \ExternalModules\AbstractExternalModule
