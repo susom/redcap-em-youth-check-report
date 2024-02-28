@@ -68,7 +68,7 @@
         },
         {
           "key": "score-value",
-          "name": "<b>Default Score Field Value</b><br/>",
+          "name": "<b>Threshold Score Value</b><br/>",
           "required": false,
           "type": "text"
         }
