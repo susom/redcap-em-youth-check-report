@@ -3189,8 +3189,8 @@ var SearchSection_component = normalizeComponent(
 )
 
 /* harmony default export */ var SearchSection = (SearchSection_component.exports);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/MainSection.vue?vue&type=template&id=29606f58&scoped=true
-var MainSectionvue_type_template_id_29606f58_scoped_true_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/MainSection.vue?vue&type=template&id=5977160a&scoped=true
+var MainSectionvue_type_template_id_5977160a_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', [_c('div', {
@@ -3220,7 +3220,7 @@ var MainSectionvue_type_template_id_29606f58_scoped_true_render = function rende
     }
   })], 1) : _c('div', [_c('p', [_vm._v("No record is selected.")])])]);
 };
-var MainSectionvue_type_template_id_29606f58_scoped_true_staticRenderFns = [function () {
+var MainSectionvue_type_template_id_5977160a_scoped_true_staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -3235,7 +3235,7 @@ var MainSectionvue_type_template_id_29606f58_scoped_true_staticRenderFns = [func
   })])]);
 }];
 
-;// CONCATENATED MODULE: ./src/components/MainSection.vue?vue&type=template&id=29606f58&scoped=true
+;// CONCATENATED MODULE: ./src/components/MainSection.vue?vue&type=template&id=5977160a&scoped=true
 
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/SummarySection.vue?vue&type=template&id=3c98d082&scoped=true
 var SummarySectionvue_type_template_id_3c98d082_scoped_true_render = function render() {
@@ -3602,6 +3602,7 @@ var ScalesSection_component = normalizeComponent(
   methods: {
     getRecord: function () {
       this.showLoader = true;
+      this.showAlert = false;
       var obj = this;
       window.module.ajax('get_record', {
         'record_id': this.record_id
@@ -3636,7 +3637,7 @@ var ScalesSection_component = normalizeComponent(
     });
     let urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('record_id')) {
-      this.record_id = parseInt(urlParams.get('record_id'));
+      this.record_id = urlParams.get('record_id');
       this.getRecord();
     }
   }
@@ -3653,11 +3654,11 @@ var ScalesSection_component = normalizeComponent(
 ;
 var MainSection_component = normalizeComponent(
   components_MainSectionvue_type_script_lang_js,
-  MainSectionvue_type_template_id_29606f58_scoped_true_render,
-  MainSectionvue_type_template_id_29606f58_scoped_true_staticRenderFns,
+  MainSectionvue_type_template_id_5977160a_scoped_true_render,
+  MainSectionvue_type_template_id_5977160a_scoped_true_staticRenderFns,
   false,
   null,
-  "29606f58",
+  "5977160a",
   null
   
 )

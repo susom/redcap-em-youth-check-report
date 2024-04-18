@@ -41,6 +41,7 @@ export default {
   methods: {
     getRecord: function () {
       this.showLoader = true;
+      this.showAlert = false;
       var obj = this
       window.module.ajax('get_record', {'record_id': this.record_id}).then(function (response) {
         console.log(response)
@@ -74,7 +75,7 @@ export default {
 
     let urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('record_id')) {
-      this.record_id = parseInt(urlParams.get('record_id'));
+      this.record_id = urlParams.get('record_id');
       this.getRecord()
     }
 
