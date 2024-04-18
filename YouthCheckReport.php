@@ -479,7 +479,7 @@ class YouthCheckReport extends \ExternalModules\AbstractExternalModule
 
     public function getRecordsList()
     {
-        $records = \Records::getCustomRecordLabelsSecondaryFieldAllRecords([], true);
+        $records = \Records::getRecordList($this->getProjectId());
         $result = array();
         foreach ($records as $key => $record) {
             $result[] = array('id' => $key, 'label' => $record);
