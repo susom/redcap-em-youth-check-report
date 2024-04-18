@@ -39,7 +39,7 @@ class YouthCheckReport extends \ExternalModules\AbstractExternalModule
                 $data = \REDCap::getData($param);
                 $data = $data[$record_id][$this->getFirstEventId()];
                 if(is_null($data)){
-                    throw new \Exception("No data found for this record $record_id");
+                    throw new \Exception("No data found for this record <b>$record_id</b>");
                 }
                 $result = $this->processSummaryData($data, []);
                 $result = $this->processFurtherEval($data, $result);

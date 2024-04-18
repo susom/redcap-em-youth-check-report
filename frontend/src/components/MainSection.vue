@@ -3,7 +3,7 @@
 
     <div class="row">
       <div v-if="showAlert === true" class="col-12">
-        <p :class="alertVariant" class="alert">{{ alertMessage }}</p>
+        <p :class="alertVariant" class="alert" v-html="alertMessage"></p>
       </div>
     </div>
     <div v-if="showLoader === true" class="row">
