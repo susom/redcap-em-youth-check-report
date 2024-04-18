@@ -22,12 +22,12 @@ class YouthCheckReport extends \ExternalModules\AbstractExternalModule
     {
         if (isset($action)) {
             if ($action == 'get_record' and $payload[\REDCap::getRecordIdField()] != '') {
-                $user_rights = \REDCap::getUserRights();
+                $user_rights = \REDCap::getUserRights(USERID)[USERID];
                 $record_id = $payload[\REDCap::getRecordIdField()];
                 // if user is assigned to DAG. make sure requested record is same dag as user.
                 if ($user_rights['group_id'] != '') {
                     if ($user_rights['group_id'] != $this->getDAG($record_id)) {
-                        throw new \Exception("You can view this record");
+                        throw new \Exception("You can not view this record");
                     }
                 }
 
@@ -479,7 +479,9 @@ class YouthCheckReport extends \ExternalModules\AbstractExternalModule
 
     public function getRecordsList()
     {
-        $records = \Records::getRecordList($this->getProjectId());
+        // get user dag id to list only records attached to the same dag
+        $user_rights = \REDCap::getUserRights(USERID)[USERID];
+        $records = \Records::getRecordListSingleDag($this->getProjectId(), $user_rights['group_id']);
         $result = array();
         foreach ($records as $key => $record) {
             $result[] = array('id' => $key, 'label' => $record);
