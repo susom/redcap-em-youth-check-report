@@ -120,7 +120,7 @@ class YouthCheckReport extends \ExternalModules\AbstractExternalModule
 
                     }
 
-                    if ($item['has-score']) {
+                    if ($item['has-score'] and !is_array($value)) {
                         $array['value'] = $value;
                     }
                     $result['symptom_scale_reconstruction'][$formName]['rows'][] = $array;
@@ -301,6 +301,16 @@ class YouthCheckReport extends \ExternalModules\AbstractExternalModule
 
         $options = parseEnum($Proj->metadata[$field]['element_enum']);
 
+        // this mean field is a checkbox and user might select multiple values. So we need to loop through the values
+        if(is_array($value)){
+            // we need the check the value of each selected option.
+            $found = array_keys($value, '1');
+            $result = '';
+            foreach ($found as $item){
+                $result  .= $options[$item] . '<br>';
+            }
+            return $result ? rtrim($result, '<br>') : '';
+        }
         return $options[$value];
     }
 
