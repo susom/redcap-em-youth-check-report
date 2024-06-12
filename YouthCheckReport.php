@@ -320,7 +320,7 @@ class YouthCheckReport extends \ExternalModules\AbstractExternalModule
     public function isFormEnabled($project, $formName, $data, $forms)
     {
         foreach ($forms as $key => $item) {
-            if (strtolower($formName) === strtolower(strip_tags($item))) {
+            if (strtolower($formName) === trim(strtolower(strip_tags($item)))) {
                 return $data['sections'][$key];
             }
         }
