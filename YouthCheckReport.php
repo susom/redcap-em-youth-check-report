@@ -113,7 +113,7 @@ class YouthCheckReport extends \ExternalModules\AbstractExternalModule
                     }
 
                     if (trim($fieldname) == $item['score-field']) {
-                        $array['label'] = '<strong>' . $Proj->metadata[$fieldname]['element_label'] . '</strong>';
+                        $array['label'] = '<strong>' . str_replace('(HIDDEN-SURVEY)', '', $Proj->metadata[$fieldname]['element_label']) . '</strong>';
                         $array['decode'] = '';
 
                     } else {
