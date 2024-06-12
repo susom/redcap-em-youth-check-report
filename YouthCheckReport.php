@@ -58,9 +58,16 @@ class YouthCheckReport extends \ExternalModules\AbstractExternalModule
     {
         global $Proj;
 
+        $forms = parseEnum($Proj->metadata['sections']['element_enum']);
         foreach ($this->getForms() as $item) {
 
+
+
             $formName = $Proj->forms[$item['form']]['menu'];
+
+            if(!$this->isFormEnabled($formName, $data, $forms)){
+                continue;
+            }
 
             if ($item['has-score'] == '1') {
                 $result['symptom_scale_reconstruction'][$formName]['header'] = array('Question', 'Answer', 'Score');
@@ -275,7 +282,7 @@ class YouthCheckReport extends \ExternalModules\AbstractExternalModule
             }
 
             $formName = $Proj->forms[$module['form']]['menu'];
-            if (!$this->isFormEnabled($Proj, $formName, $screen, $forms)) {
+            if (!$this->isFormEnabled($formName, $screen, $forms)) {
                 continue;
             }
 
@@ -317,7 +324,7 @@ class YouthCheckReport extends \ExternalModules\AbstractExternalModule
     /**
      * @throws \Exception
      */
-    public function isFormEnabled($project, $formName, $data, $forms)
+    public function isFormEnabled($formName, $data, $forms)
     {
         foreach ($forms as $key => $item) {
             if (strtolower($formName) === trim(strtolower(strip_tags($item)))) {
@@ -329,8 +336,6 @@ class YouthCheckReport extends \ExternalModules\AbstractExternalModule
 
     private function processSummaryData($data, $result)
     {
-        $aa = $data['sc_total_dps'];
-        $aa2 = $data['sc_impairment'];
         $result['summary']['test_id'] = $data['test_id'];
         $result['summary']['score_total_dps'] = $data['sc_total_dps'] ?: 0;
         $result['summary']['score_impairment'] = $data['sc_impairment'] ?: 0;
