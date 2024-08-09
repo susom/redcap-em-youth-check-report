@@ -425,6 +425,7 @@ class YouthCheckReport extends \ExternalModules\AbstractExternalModule
                 ($screen['sc_pr_panic_attacks'] == '' ? 0 : $screen['sc_pr_panic_attacks'] ?? 0) +
                 ($screen['sc_pr_general_anxiety'] == '' ? 0 : $screen['sc_pr_general_anxiety'] ?? 0) +
                 ($screen['sc_pr_ocd'] == '' ? 0 : $screen['sc_pr_ocd'] ?? 0) +
+                ($screen['sc_early_psychosis'] == '' ? 0 : $screen['sc_early_psychosis'] ?? 0) +
                 ($screen['sc_pr_depression'] == '' ? 0 : $screen['sc_pr_depression'] ?? 0);
 
             if ($sum > 0) {
@@ -443,6 +444,9 @@ class YouthCheckReport extends \ExternalModules\AbstractExternalModule
                 }
                 if ($screen['sc_pr_depression'] == '1') {
                     $impair_list .= ' <br>Depression';
+                }
+                if ($screen['sc_pr_early_psychosis'] == '1') {
+                    $impair_list .= ' <br>Early Psychosis';
                 }
                 $list[] = '<span style="color:#FF0000">Impairment score of ' . $screen['sc_impairment'] . ' (threshold of 6) and the following disorders are present: </span>' . $impair_list;
             }
