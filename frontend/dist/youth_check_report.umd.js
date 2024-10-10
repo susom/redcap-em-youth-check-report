@@ -2953,23 +2953,23 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/HeaderSection.vue?vue&type=template&id=1afc0c38&scoped=true
-var HeaderSectionvue_type_template_id_1afc0c38_scoped_true_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/HeaderSection.vue?vue&type=template&id=ecd11956&scoped=true
+var HeaderSectionvue_type_template_id_ecd11956_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _vm._m(0);
 };
-var HeaderSectionvue_type_template_id_1afc0c38_scoped_true_staticRenderFns = [function () {
+var HeaderSectionvue_type_template_id_ecd11956_scoped_true_staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
     staticClass: "col-xs-12"
-  }, [_c('h1', [_vm._v("Diagnostic Predictive Scales (DPS) Report")]), _c('p', {
+  }, [_c('h1', [_vm._v("YouthCheck Report")]), _c('p', {
     staticClass: "lead"
-  }, [_vm._v("The DPS is a screen and is not diagnostic. It is not a substitute for a thorough clinical evaluation. ")])]);
+  }, [_vm._v("YouthCheck is a screen and is not diagnostic. It is not a substitute for a thorough clinical evaluation. ")])]);
 }];
 
-;// CONCATENATED MODULE: ./src/components/HeaderSection.vue?vue&type=template&id=1afc0c38&scoped=true
+;// CONCATENATED MODULE: ./src/components/HeaderSection.vue?vue&type=template&id=ecd11956&scoped=true
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/HeaderSection.vue?vue&type=script&lang=js
 /* harmony default export */ var HeaderSectionvue_type_script_lang_js = ({
@@ -3088,11 +3088,11 @@ function normalizeComponent(
 ;
 var component = normalizeComponent(
   components_HeaderSectionvue_type_script_lang_js,
-  HeaderSectionvue_type_template_id_1afc0c38_scoped_true_render,
-  HeaderSectionvue_type_template_id_1afc0c38_scoped_true_staticRenderFns,
+  HeaderSectionvue_type_template_id_ecd11956_scoped_true_render,
+  HeaderSectionvue_type_template_id_ecd11956_scoped_true_staticRenderFns,
   false,
   null,
-  "1afc0c38",
+  "ecd11956",
   null
   
 )
@@ -3422,13 +3422,13 @@ var ClinicalSignificantSection_component = normalizeComponent(
 )
 
 /* harmony default export */ var ClinicalSignificantSection = (ClinicalSignificantSection_component.exports);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/DPSSymptomScaleSection.vue?vue&type=template&id=20d0e155&scoped=true
-var DPSSymptomScaleSectionvue_type_template_id_20d0e155_scoped_true_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/DPSSymptomScaleSection.vue?vue&type=template&id=284da36d&scoped=true
+var DPSSymptomScaleSectionvue_type_template_id_284da36d_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', [this.record.symptom_scale_reconstruction.length !== 0 ? _c('div', {
     staticClass: "col-xs-12"
-  }, [_c('h1', [_vm._v("DPS Symptom Scale Reconstruction")]), _vm._l(this.record.symptom_scale_reconstruction, function (item, index) {
+  }, [_c('h1', [_vm._v("YouthCheck Symptom Scale Reconstruction")]), _vm._l(this.record.symptom_scale_reconstruction, function (item, index) {
     return _c('div', {
       key: index
     }, [_c('h2', [_vm._v(_vm._s(index))]), _c('table', {
@@ -3454,7 +3454,7 @@ var DPSSymptomScaleSectionvue_type_template_id_20d0e155_scoped_true_render = fun
     }), 0)]), _c('br')]);
   })], 2) : _vm._e()]);
 };
-var DPSSymptomScaleSectionvue_type_template_id_20d0e155_scoped_true_staticRenderFns = [];
+var DPSSymptomScaleSectionvue_type_template_id_284da36d_scoped_true_staticRenderFns = [];
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/DPSSymptomScaleSection.vue?vue&type=script&lang=js
 /* harmony default export */ var DPSSymptomScaleSectionvue_type_script_lang_js = ({
@@ -3475,11 +3475,11 @@ var DPSSymptomScaleSectionvue_type_template_id_20d0e155_scoped_true_staticRender
 ;
 var DPSSymptomScaleSection_component = normalizeComponent(
   components_DPSSymptomScaleSectionvue_type_script_lang_js,
-  DPSSymptomScaleSectionvue_type_template_id_20d0e155_scoped_true_render,
-  DPSSymptomScaleSectionvue_type_template_id_20d0e155_scoped_true_staticRenderFns,
+  DPSSymptomScaleSectionvue_type_template_id_284da36d_scoped_true_render,
+  DPSSymptomScaleSectionvue_type_template_id_284da36d_scoped_true_staticRenderFns,
   false,
   null,
-  "20d0e155",
+  "284da36d",
   null
   
 )

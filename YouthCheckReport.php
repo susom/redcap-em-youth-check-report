@@ -476,7 +476,7 @@ class YouthCheckReport extends \ExternalModules\AbstractExternalModule
         }
 
         if ($screen['sc_total_dps'] >= 9) {
-            $list[] = '<span style="color:#FF0000"> Total DPS Symptom Score >= 9 : </span> ' . $screen['sc_total_dps'];
+            $list[] = '<span style="color:#FF0000"> Total YouthCheck Symptom Score >= 9 : </span> ' . $screen['sc_total_dps'];
         }
         if ($screen['sc_pr_alcohol'] == '1') {
             $list[] = '<span style="color:#FF0000">Alcohol is present</span>';

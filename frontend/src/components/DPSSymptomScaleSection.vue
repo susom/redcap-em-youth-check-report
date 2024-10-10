@@ -1,7 +1,7 @@
 <template>
     <div>
       <div v-if="this.record.symptom_scale_reconstruction.length !== 0" class="col-xs-12">
-        <h1>DPS Symptom Scale Reconstruction</h1>
+        <h1>YouthCheck Symptom Scale Reconstruction</h1>
 
         <div v-for="(item, index) in this.record.symptom_scale_reconstruction" :key="index">
           <h2>{{ index }}</h2>
