@@ -14,18 +14,13 @@ echo $module->initializeJavascriptModuleObject();
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/vue-select@latest/dist/vue-select.css">
 
-    <script src="<?php echo $module->getUrl("frontend/dist/youth_check_report.umd.js") ?>"></script>
-    <div id="youth-check-report"></div>
+
+    <div id="app"></div>
     <script>
         window.module = <?=$module->getJavascriptModuleObjectName()?>;
         window.records_list = <?php echo json_encode($module->getRecordsList());?>;
-        window.addEventListener('DOMContentLoaded', function (event) {
-            const componentPromise = window.renderVueComponent(youth_check_report, '#youth-check-report')
-            componentPromise.then(component => {
-                console.log('component is ready')
-            })
-        })
     </script>
+    <script src="<?php echo $module->getUrl("frontend_3/public/js/bundle.js") ?>"></script>
     <?php
 } catch (\Exception $e) {
     ?>

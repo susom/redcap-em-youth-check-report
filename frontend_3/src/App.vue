@@ -13,6 +13,7 @@
 import HeaderSection from "./components/HeaderSection.vue";
 import SearchSection from "./components/SearchSection.vue";
 import MainSection from "./components/MainSection.vue";
+import mitt from 'mitt';
 
 export default {
   name: 'App',

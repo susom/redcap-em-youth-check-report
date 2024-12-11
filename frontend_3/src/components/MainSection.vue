@@ -30,12 +30,14 @@
   </div>
 </template>
 <script>
-import SummarySection from "@/components/SummarySection.vue";
-import ClinicalSignificantSection from "@/components/ClinicalSignificantSection.vue";
-import DPSSymptomScaleSection from "@/components/DPSSymptomScaleSection.vue";
-import ScalesSection from "@/components/ScalesSection.vue";
+import SummarySection from "./SummarySection.vue";
+import ClinicalSignificantSection from "./ClinicalSignificantSection.vue";
+import DPSSymptomScaleSection from "./DPSSymptomScaleSection.vue";
+import ScalesSection from "./ScalesSection.vue";
+import eventBus from '../eventBus';
 
 export default {
+
   name: "MainSection",
   components: {ScalesSection, DPSSymptomScaleSection, ClinicalSignificantSection, SummarySection},
   methods: {
@@ -55,7 +57,11 @@ export default {
         obj.alertVariant = 'alert-danger'
         console.log(err)
       });
-    }
+    },
+    handleUpdateRecordId(record_id) {
+      this.record_id = record_id;
+      this.getRecord();
+    },
   },
   data() {
     return {
@@ -68,10 +74,12 @@ export default {
     }
   },
   mounted() {
-    this.$root.$on('update_record_id', record_id => {
-      this.record_id = record_id
-      this.getRecord()
-    });
+    // this.$root.$on('update_record_id', record_id => {
+    //   this.record_id = record_id
+    //   this.getRecord()
+    // });
+
+    eventBus.on('update_record_id', this.handleUpdateRecordId);
 
     let urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('record_id')) {
@@ -79,7 +87,11 @@ export default {
       this.getRecord()
     }
 
-  }
+  },
+  unmounted() {
+    // Clean up the event listener when the component is destroyed
+    eventBus.off('update_record_id', this.handleUpdateRecordId);
+  },
 }
 </script>
 <style scoped>

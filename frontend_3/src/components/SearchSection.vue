@@ -2,12 +2,13 @@
   <div>
     <vSelect placeholder="Please Choose a record" class="mb-3 nopadding" value="id" :options="records_list" v-model="record_id"
              :reduce="(option) => option.id"
-             @input="this.setRecordId"></vSelect>
+             @update:modelValue="setRecordId"></vSelect>
   </div>
 </template>
 <script>
 
 import vSelect from 'vue-select'
+import eventBus from '../eventBus';
 
 
 import 'vue-select/dist/vue-select.css';
@@ -19,7 +20,7 @@ export default {
   name: "SearchSection",
   methods: {
     setRecordId: function (record_id) {
-      this.$root.$emit('update_record_id', record_id);
+      eventBus.emit('update_record_id', record_id);
       this.addParameterToUrl('record_id', record_id)
     },
     addParameterToUrl: function (parameterName, parameterValue) {
